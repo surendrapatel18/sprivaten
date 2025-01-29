@@ -1,0 +1,1051 @@
+/* Font-family-Style */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global-CSS-Using-Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--custom-white-color);
+    color: var(--custom-black-color);
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.20px;
+}
+
+:root {
+    --dark-gray-color: #737373;
+    --custom-white-color: #FFFFFF;
+    --custom-black-color: #000000;
+    --dark-blue-color: #252B42;
+    --secondary-color: #00A0C1;
+    --gray-darkness-color: #BDBDBD;
+    --light-white-color: #F9F9F9;
+    --primary-color: #FFA62B;
+    --green-light: #D9EDFF;
+    --dark-white-color: #FAFAFA;
+    --sky-color: #16697A;
+
+
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 59px;
+}
+
+.layout-container {
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* Wrapper-Section-Banner-Start */
+
+.wrapper-section {
+    background-image: url(assets/banner_secttion-background.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 823px;
+}
+
+/* Header-Start */
+
+header {
+    padding: 36px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-name h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.10px;
+    color: var(--dark-blue-color);
+}
+
+/* Nav-links-Desktop-menu */
+
+.nav-links ul {
+    list-style: none;
+    display: flex;
+    gap: 21px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links li a {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--dark-gray-color);
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+    font-weight: 600;
+    position: relative;
+}
+
+
+.nav-links li a:hover {
+    color: var(--dark-blue-color);
+}
+
+.nav-links li a.active {
+    color: var(--dark-blue-color);
+}
+
+.nav-links li a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transform: scaleX(1);
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 22px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--secondary-color);
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Nav-Icons-Style */
+
+.nav-icons {
+    display: flex;
+    gap: 21px;
+    margin-left: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle-bar-icon {
+    display: none;
+}
+
+/* Mobile-Menu */
+
+.mobile-menu {
+    width: 100%;
+    background-color: #F6F6F6;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+
+}
+
+.menu-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.toggle-bar-icon {
+    cursor: pointer;
+}
+
+.mobile-menu-nav-links {
+    display: none;
+    flex-direction: column;
+    background: #F6F6F6;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+}
+
+
+.mobile-menu-nav-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu-nav-links li {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.mobile-menu-nav-links a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 45px;
+    letter-spacing: 0.24px;
+    text-align: center;
+    transition: color 0.3s ease;
+    color: var(--dark-gray-color);
+}
+
+.mobile-menu-nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+@keyframes backInDownAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(5px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.mobile-menu-nav-links.active {
+    display: flex;
+    animation: backInDownAnimation 0.8s ease-in-out;
+}
+
+
+
+/* Hero-Banner-Section-Start */
+.hero-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-text-left {
+    max-width:55%;
+}
+
+.hero-right-book-appointment-form {
+    max-width:45%;
+}
+
+.hero-banner h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 80px;
+    letter-spacing: 0.20px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: var(--dark-blue-color);
+}
+
+.hero-banner h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0.20px;
+    color: var(--dark-gray-color);
+    padding-top: 35px;
+}
+
+/* Buttons-Styling-Custom */
+
+.btn-group {
+    display: flex;
+    gap: 20px;
+    margin: 35px 0;
+}
+
+button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.primary-btn a {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--custom-white-color);
+    background-color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.20px;
+    text-align: center;
+    width: 187px;
+    height: 48px;
+    padding: 15px 36px;
+    border-radius: 37px;
+    border: 1px solid var(--secondary-color);
+    transition: all 0.3s ease-in;
+}
+
+.secondary-btn a {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0.20px;
+    border: 1px solid var(--secondary-color);
+    text-align: center;
+    width: 154px;
+    height: 48px;
+    padding: 14px 34px;
+    border-radius: 37px;
+    transition: all 0.3s ease-in;
+}
+
+.primary-btn a:hover {
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.secondary-btn a:hover {
+    background-color: var(--secondary-color);
+    color: var(--custom-white-color);
+    box-shadow: 4px 4px 4px 4px #b1b4b4;
+}
+
+/* Book-Appointment-Form */
+
+.appointment-form {
+    width: 328px;
+    height: 619px;
+    padding: 40px;
+    gap: 40px;
+    border-radius: 10px;
+    background-color: var(--custom-white-color);
+    margin: 0 auto;
+}
+
+.appointment-form h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 32px;
+    color: var(--dark-blue-color);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+label h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: var(--dark-blue-color);
+    margin-bottom: 8px;
+}
+
+
+.appointment-form input,
+.appointment-form select {
+    width: 100%;
+    padding: 15px 21px;
+    color: var(--dark-gray-color);
+    border: 2px solid var(--gray-darkness-color);
+    border-radius: 5px;
+    background-color: var(--light-white-color);
+    font-size: 14px;
+    margin-bottom: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.appointment-form button {
+    width: 100%;
+    padding: 15px 21px;
+    color: var(--dark-gray-color);
+    border: 2px solid var(--gray-darkness-color);
+    border-radius: 5px;
+    background-color: var(--light-white-color);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.appointment-form input:focus,
+.appointment-form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.appointment-form button {
+    background-color: var(--primary-color);
+    color: var(--custom-white-color);
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.appointment-form button:hover {
+    background-color: var(--secondary-color);
+}
+
+.appointment-form input::placeholder,
+.appointment-form select::placeholder {
+    color: var(--dark-gray-color);
+}
+
+.appointment-form select option:disabled {
+    color: var(--gray-darkness-color);
+}
+
+
+/* Hero-Banner-Section-End */
+
+/* WHY CHOOSE US-SECTION-START */
+
+.choose-us {
+    padding: 50px 0;
+}
+
+.text-center {
+    align-items: center;
+    text-align: center;
+}
+
+.text-center h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 57px;
+    color: var(--dark-blue-color);
+}
+
+.text-center p {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-gray-color);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    padding-top: 12px;
+}
+
+.card-box-col {
+    width: 100%;
+    width: 328px;
+    height: auto;
+    border-radius: 10px;
+    background-color: var(--green-light);
+    position: relative;
+    padding: 2px;
+}
+
+.card-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background-color: var(--custom-white-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-box-col h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--dark-blue-color);
+}
+
+.card-icon-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    align-items: center;
+    padding: 30px 24px;
+}
+
+.card-content {
+    max-width: 100%;
+    max-width: 324px;
+    height: auto;
+    border-radius: 10px;
+    background-color: var(--custom-white-color);
+    padding: 40px;
+    bottom: 2px;
+    transition: all 0.3s ease-in;
+}
+
+.card-content:hover {
+    transform: scale(1.1);
+    transform: translateY(-50%);
+}
+
+.card-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--dark-gray-color);
+    padding-bottom: 8px;
+}
+
+.card-content-link a {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    transition: color 0.3s ease-in;
+}
+
+.card-content-link a:hover,
+.user-link-profile a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.card-row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    gap: 20px;
+}
+
+/* WHY-CHOOSE-US-SECTION-END */
+
+/* BUSINESS-SERVICE-SECTION-START */
+
+.business-service {
+    background-color: var(--dark-white-color);
+    padding: 80px 0;
+}
+
+iframe {
+    position: absolute;
+    z-index: 1;
+    padding-top: 50px;
+    aspect-ratio: 16/9;
+    border-radius: 5px;
+    margin: 0 20px;
+    max-width: 80%;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+} 
+
+
+.play-button {
+    position: absolute;
+    transform: translateY(200%);
+    background-color:var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width:97px;
+    height:97px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:28px;
+    cursor: pointer;
+    z-index:10;
+}
+
+.half-section-bg-color {
+    background-color: var(--dark-blue-color);
+    height: 407px;
+    position: relative;
+    transform: translateY(40%);
+    margin-bottom: 80px;
+}
+
+/* Business-Services-Section-End */
+
+/* What-Clients-Say-SECTION-START */
+
+.clients-say-section {
+    background-color: rgba(243, 243, 243, 1);
+    padding: 80px 0;
+}
+
+.rating-card {
+    max-width: 327px;
+    min-height: 244px;
+    height: auto;
+    padding: 30px 35px;
+    border-radius: 5px;
+    background-color: var(--custom-white-color);
+    border: 1px solid rgba(222, 222, 222, 1);
+    transition: all 0.3s ease-in;
+
+}
+
+.rating-card:hover {
+    transform: scale(1.1);
+    box-shadow: 4px 4px 8px 8px var(--gray-darkness-color);
+}
+
+.card-rating-content h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--dark-gray-color);
+    padding: 18px 0;
+}
+
+.rating-icon-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.rating-star-icon {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.star-image {
+    transition: opacity 0.3s ease;
+}
+
+.rating-star-icon:hover .star-image {
+    content: url('assets/rating_star-fill.svg');
+}
+
+.user-profile-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.user-link-profile a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    color: var(--primary-color);
+}
+
+.user-position h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark-blue-color)
+}
+
+/* What-Clients-Say-Section-END */
+
+/* MEET-OUT-TEAM-SECTION-START */
+
+.our-team-section {
+    background-color: var(--custom-white-color);
+    padding: 80px 0;
+}
+
+.team-row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    gap: 20px;
+}
+
+.col-team {
+    text-align: center;
+    width: 329px;
+    height: 373px;
+    border: 1px solid #EEEEEE;
+    transition: all 0.3s ease-in;
+}
+
+.col-team:hover {
+    transform: translateY(-10%);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.team-position h5 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-blue-color);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+
+}
+
+
+.team-position h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--dark-gray-color);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    padding-bottom: 8px;
+}
+
+.team-position {
+    padding-top: 20px;
+}
+
+
+/* MEET-OUR-TEAM-SECTION-END */
+
+/* CONTACT-US-SECTION-START */
+
+.contact-us-section {
+    background-image: url(assets/contact_background.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* height: 679px; */
+    height: auto;
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.contact-us-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 57px;
+    color: var(--dark-blue-color);
+    padding-bottom: 40px;
+}
+
+.contact-us-section h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    color: var(--dark-blue-color);
+}
+
+.contact-appointment-form {
+    max-width: 602px;
+    width: 100%;
+    /* height: 579px; */
+    height: auto;
+    padding: 40px 0;
+
+}
+
+.contact-appointment-form button {
+    width: 35%;
+    /* max-width: 218px; */
+    padding: 15px 21px;
+    color: var(--custom-white-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 30px;
+}
+
+.contact-appointment-form button:hover,
+.contact-us a:hover {
+    background-color: var(--secondary-color);
+}
+
+.contact-appointment-input {
+    width: 100%;
+    /* max-width: 286px; */
+    height: 50px;
+    padding: 0 15px;
+    color: var(--dark-gray-color);
+    border: 2px solid var(--gray-darkness-color);
+    border-radius: 5px;
+    background-color: var(--light-white-color);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.form-group {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.message-group {
+    width: 100%;
+}
+
+.message-box {
+    width: 100%;
+    max-width: 598px;
+    height: 140px;
+    padding: 15px 21px;
+    color: var(--dark-gray-color);
+    border: 2px solid var(--gray-darkness-color);
+    border-radius: 5px;
+    background-color: var(--light-white-color);
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    resize: none;
+}
+
+.contact-appointment-input:focus,
+.message-box:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.contact-us {
+    display: inline-block;
+    padding: 15px 21px;
+    color: var(--custom-white-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 160px;
+    max-width: 160px;
+}
+
+.contact-us:hover {
+    background-color: var(--secondary-color);
+}
+
+.contact-us a {
+    color: var(--custom-white-color);
+    text-decoration: none;
+    display: block;
+    width: 100%;
+}
+
+
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-text h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    color: var(--dark-blue-color);
+    padding-bottom: 5px;
+}
+
+.contact-text p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    color: var(--dark-gray-color);
+}
+
+.conatct-btn-col {
+    padding: 30px 0;
+}
+
+/* CONTACT-US-SECTION-END */
+
+/* FOOTER-SECTION-START */
+
+footer {
+    background-color: var(--dark-blue-color);
+    padding: 50px 0;
+}
+
+.footer-logo-name h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0.10px;
+    color: var(--custom-white-color);
+}
+
+.social-icon img {
+    transition: all 0.3s ease;
+}
+
+.social-icon img:hover {
+    transform: scale(1.2);
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-hr-line {
+    border: 1px solid #364067;
+    margin: 50px 0;
+}
+
+
+.footer-column-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.footer-column h5 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin-bottom: 10px;
+    color: var(--custom-white-color);
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.2px;
+    color: var(--white);
+    text-decoration: none;
+    color: var(--gray-darkness-color);
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    width: 321px;
+    height: 58px;
+
+}
+
+.subscribe-form input {
+    width: 100%;
+    max-width: 321px;
+    height: 58px;
+    padding: 15px 21px;
+    border: 1px solid var(--gray-light);
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 14px;
+    color: var(--gray-darkness-color);
+}
+
+.subscribe-form button {
+    width: 117px;
+    height: 58px;
+    border: none;
+    background: var(--primary-color);
+    color: var(--custom-white-color);
+    font-weight: 600;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+    padding: 15px 22px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.subscribe-form button:hover {
+    background: var(--sky-color);
+}
+
+.footer-column p {
+    font-size: 12px;
+    line-height: 28px;
+    color: var(--gray-darkness-color);
+    margin-top: 10px;
+}
+
+.footer-bottom {
+    background-color: var(--sky-color);
+    padding: 25px 0;
+}
+
+.copyright-text p,
+.copyright-text a {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--custom-white-color);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+}
